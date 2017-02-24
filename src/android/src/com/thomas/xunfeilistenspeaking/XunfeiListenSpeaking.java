@@ -44,7 +44,8 @@ public class XunfeiListenSpeaking extends CordovaPlugin{
     protected void pluginInitialize() {
         super.pluginInitialize();
         context = cordova.getActivity();
-        SpeechUtility.createUtility(context, SpeechConstant.APPID +"=584e7225");
+//         SpeechUtility.createUtility(context, SpeechConstant.APPID +"=584e7225");
+        SpeechUtility.createUtility(context, SpeechConstant.APPID +context.getString(getId("app_id","string")));
     }
 
     private static final int DIALOG_ACTIVIT_CODE = 0;
