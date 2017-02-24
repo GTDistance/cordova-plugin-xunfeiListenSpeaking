@@ -1,2 +1,10 @@
-# cordova-plugin-xunfeiListenSpeaking
-科大讯飞的语音听写与播报的插件
+# cordova-plugin-IFlyspeech
+科大讯飞的语音听说读写的cordova插件 
+### Supported Platforms
+
+- iOS
+- android
+
+## Installation
+
+cordova plugin add https://github.com/Edc-zhang/cordova-plugin-IFlyspeech
