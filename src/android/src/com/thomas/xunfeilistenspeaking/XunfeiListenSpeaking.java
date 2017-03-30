@@ -58,8 +58,21 @@ public class XunfeiListenSpeaking extends CordovaPlugin{
         this.callbackContext = callbackContext;
         //开始听写
         if (action.equals("startListen")){
-            boolean isShowDialog = args.getBoolean(0);
-            String punc = args.getBoolean(1)?"1":"0";
+//            boolean isShowDialog = args.getBoolean(0);
+
+//            String punc = args.getBoolean(1)?"1":"0";
+            boolean isShowDialog ;
+            try {
+                isShowDialog = args.getBoolean(0);
+            }catch (Exception e){
+                isShowDialog = true;
+            }
+            String punc;
+            try{
+                punc = args.getBoolean(1)?"1":"0";
+            }catch (Exception e){
+                punc = "1";
+            }
             if (isShowDialog){
                 Intent intent = new Intent();
                 intent.setClass(context, XunfeiDialogActivity.class);
